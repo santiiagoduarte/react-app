@@ -1,3 +1,5 @@
+import CartWidget from '../CartWidget';
+
 const Navbar = () => {
 
     let navbarStyle = {
@@ -18,6 +20,7 @@ const Navbar = () => {
     
     let logoStyle = {
         padding: 16,
+        paddingLeft: 22,
         width: 70,
         height: 70,
     }
@@ -42,27 +45,28 @@ const Navbar = () => {
         background: '#E2DCC8'
     }
 
-    let cartWidget = {
-        padding: 16, 
-        margin: 10,
-        cursor: 'pointer',
-        verticalAlign: 'middle',
-        textDecoration: 'none',
-        color: '#F1EFDC',
-        fontSize: 30,
-    }
+    // let cartWidget = {
+    //     padding: 16, 
+    //     margin: 10,
+    //     cursor: 'pointer',
+    //     verticalAlign: 'middle',
+    //     textDecoration: 'none',
+    //     color: '#F1EFDC',
+    //     fontSize: 30,
+    // }ss
 
     return (
-    <nav style={navbarStyle}>
-        <a href="#"><img src="logo512.png" alt="" style={logoStyle}/></a>
-        <a style={navbarTitle}>Tienda</a>
-        <a href="#" style={navbarItem}>Home</a>
-        <a href="#" style={navbarItem}>Categories</a>
-        <a href="#" style={navbarItem}>Contact</a>
-        <a href="#" style={loginBtn}>Login</a>
-        {/* <a href="#"><img src="263142.png" alt="Shopping Cart" style={logoStyle}/></a>       */}
-        <i class="material-icons" style={cartWidget}>add_shopping_cart</i>
-    </nav>
+        <nav style={navbarStyle}>
+            <a href="#"><img src="logo512.png" alt="" style={logoStyle}/></a>
+            <a style={navbarTitle}>Tienda</a>
+            <a href="#" style={navbarItem}>Home</a>
+            <a href="#" style={navbarItem}>Categories</a>
+            <a href="#" style={navbarItem}>Contact</a>
+            <a href="#" style={loginBtn}>Login</a>
+            <CartWidget/>
+            {/* <a href="#"><img src="263142.png" alt="Shopping Cart" style={logoStyle}/></a>       */}
+            {/* <i class="material-icons" style={cartWidget}>add_shopping_cart</i> */}
+        </nav>
     )
 }
 

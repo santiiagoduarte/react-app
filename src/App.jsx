@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Title from './components/Title';
+import ItemListContainer from './containers/ItemListContainer';
 
 
 const App = () => {
@@ -14,8 +14,7 @@ const App = () => {
     <div className='App' style={styles}>
       <Navbar />
       <header>
-        <Title msg="Shopping Cart">
-        </Title>
+        <ItemListContainer msg='Shopping Cart'/>
       </header>
     </div>
   );
