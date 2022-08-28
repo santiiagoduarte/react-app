@@ -6,7 +6,7 @@ const CartWidget = () => {
         cursor: 'pointer',
         verticalAlign: 'middle',
         textDecoration: 'none',
-        color: '#F1EFDC',
+        color: 'white',
         fontSize: 30,
     }
 

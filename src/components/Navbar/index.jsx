@@ -30,7 +30,7 @@ const Navbar = () => {
         cursor: 'pointer',
         verticalAlign: 'middle',
         textDecoration: 'none',
-        color: '#F1EFDC',
+        color: 'white',
     }
 
     let loginBtn = {
