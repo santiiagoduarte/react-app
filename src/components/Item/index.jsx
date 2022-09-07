@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCount";
 
+
 const addItem = (items) => {
     console.log(`You've purchased ${items} in items`);
 };
@@ -19,11 +20,6 @@ let itemCardStyle = {
 let itemTextStyle = {
     fontSize: 16
 }; 
-
-// let itemCardLayout = {
-//     display: 'flex',
-//     alignItems: 'center',
-// };
 
 let itemImageStyle = {
     borderRadius: 50,
