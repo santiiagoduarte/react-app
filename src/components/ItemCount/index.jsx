@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 
 const ItemCount = ({initial, stock, onAdd}) => {
@@ -12,6 +13,12 @@ const ItemCount = ({initial, stock, onAdd}) => {
         borderRadius: 30,
         background: '#E2DCC8'
     }
+
+    let itemCountStyle = {
+        background: 'white',
+        borderRadius: 30
+    }
+
     const [count, setCount] = useState(parseInt(initial));
 
     const removeItem = () => {
@@ -26,7 +33,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
     }, [initial])
 
     return (
-        <div>
+        <div style={itemCountStyle}>
+            
             <p>Stock available: {stock}</p>
             <button style={btnStyle} disabled={count <= 1} onClick={removeItem}>-</button>
             <span> You're selecting {count} item(s)</span>

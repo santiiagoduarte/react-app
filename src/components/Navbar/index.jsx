@@ -1,3 +1,4 @@
+import React from "react";
 import CartWidget from '../CartWidget';
 
 const Navbar = () => {
@@ -45,27 +46,15 @@ const Navbar = () => {
         background: '#E2DCC8'
     }
 
-    // let cartWidget = {
-    //     padding: 16, 
-    //     margin: 10,
-    //     cursor: 'pointer',
-    //     verticalAlign: 'middle',
-    //     textDecoration: 'none',
-    //     color: '#F1EFDC',
-    //     fontSize: 30,
-    // }ss
-
     return (
         <nav style={navbarStyle}>
-            <a href="#"><img src="logo512.png" alt="" style={logoStyle}/></a>
-            <a style={navbarTitle}>Tienda</a>
+            <a href="#"><img src="https://westlakepro.com/wp-content/uploads/2020/01/Barefoot-Dark-Logo.png" alt="" style={logoStyle}/></a>
+            <a style={navbarTitle}>Barefoot Sound</a>
             <a href="#" style={navbarItem}>Home</a>
-            <a href="#" style={navbarItem}>Categories</a>
+            <a href="#" style={navbarItem}>Speakers</a>
             <a href="#" style={navbarItem}>Contact</a>
             <a href="#" style={loginBtn}>Login</a>
             <CartWidget/>
-            {/* <a href="#"><img src="263142.png" alt="Shopping Cart" style={logoStyle}/></a>       */}
-            {/* <i class="material-icons" style={cartWidget}>add_shopping_cart</i> */}
         </nav>
     )
 }

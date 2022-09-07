@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React from "react";
 import './App.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './containers/ItemListContainer';
@@ -14,7 +15,7 @@ const App = () => {
     <div className='App' style={styles}>
       <Navbar />
       <header>
-        <ItemListContainer msg='Shopping Cart'/>
+        <ItemListContainer msg='Our Speakers' />
       </header>
     </div>
   );
