@@ -44,6 +44,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
             <div>
                 <button style={btnStyle} disabled={count > stock} onClick={() => onAdd(count)} >ADD TO CART</button>
             </div>
+            <br />
         </div>
     );
 }

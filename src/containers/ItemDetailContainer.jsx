@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../components/ItemDetail/index";
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({msg}) => {
 
     const [products, setProducts] = useState([]);
 
@@ -17,7 +17,9 @@ const ItemDetailContainer = () => {
     }, []);
 
     return (
-            <ItemDetail img={products.thumbnail} title={products.title} price={products.price} />
+            <>
+                <ItemDetail img={products.thumbnail} title={products.title} price={products.price} />
+            </>
     )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ img, title, price }) => {
     const onAdd = () => {
@@ -27,19 +28,28 @@ const ItemDetail = ({ img, title, price }) => {
         width: 300,
         heigth: 300
     }
+    let btnStyle = {
+        padding: 10, 
+        marginLeft: 10,
+        marginTop: 10,
+        fontWeight: 'bold',
+        verticalAlign: 'middle',
+        textDecoration: 'none',
+        color: '#100F0F',
+        border: 'none',
+        borderRadius: 30,
+        background: '#E2DCC8'
+    }
 
     return (
-        <div style={itemCardStyle}>
+    <div style={itemCardStyle}>
         <img style={itemImageStyle} src={img} alt="" />
         <h2 style={itemTextStyle}>{title}</h2>
         <h3 style={itemTextStyle}>${price}</h3>
         <ItemCount initial={1} stock={10} onAdd={onAdd} />
+        <Link to={`/speakers/detail/${title}`} style={btnStyle}><a>SEE MORE</a></Link>
     </div>
     )
 }
 
 export default ItemDetail;
-
-//title
-//price
-//img

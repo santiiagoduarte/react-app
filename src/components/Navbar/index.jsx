@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from '../CartWidget';
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
         background: '#100F0F',
         color: '#F1EFDC',
         fontFamily: 'Helvetica',
-        fontWeight: 300
+        fontWeight: 300,
     }
     
     let navbarTitle = {
@@ -48,13 +49,13 @@ const Navbar = () => {
 
     return (
         <nav style={navbarStyle}>
-            <a href="#"><img src="https://westlakepro.com/wp-content/uploads/2020/01/Barefoot-Dark-Logo.png" alt="" style={logoStyle}/></a>
+            <Link to={`/`}><a href="#"><img src="https://westlakepro.com/wp-content/uploads/2020/01/Barefoot-Dark-Logo.png" alt="" style={logoStyle}/></a></Link>
             <a style={navbarTitle}>Barefoot Sound</a>
-            <a href="#" style={navbarItem}>Home</a>
-            <a href="#" style={navbarItem}>Speakers</a>
-            <a href="#" style={navbarItem}>Contact</a>
-            <a href="#" style={loginBtn}>Login</a>
-            <CartWidget/>
+            <Link to={`/`}><a href="#" style={navbarItem}>About</a></Link>
+            <Link to={`/speakers`}><a href="#" style={navbarItem}>Speakers</a></Link>
+            <Link to={`/Contact`}><a href="#" style={navbarItem}>Contact</a></Link>
+            <Link to={`/Login`}><a href="#" style={loginBtn}>Login</a></Link>
+            <Link to={`/Checkout`}><CartWidget/></Link>
         </nav>
     )
 }
