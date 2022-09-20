@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import ItemDetailContainer from "../containers/ItemDetailContainer";
+import PageTitle from '../components/PageTitle/index'
+
 
 const items = [
     {
@@ -33,14 +35,6 @@ const items = [
 
 const ItemListContainer = ({msg}, props) => {
 
-    let titleStyle = {
-        backgroundColor: 'color',
-        margin: 40,
-        fontSize: 45,
-        fontWeight: 300,
-        fontStyle: 'bold',
-        color: 'white'
-    }
     let pageStyles = {
         display: 'flex',
         flexWrap: 'wrap',
@@ -65,7 +59,7 @@ const ItemListContainer = ({msg}, props) => {
         <div>
             <div>
                 <span>
-                    <h2 style={titleStyle} >{msg}</h2>
+                    <PageTitle msgTitle={msg}></PageTitle>
                 </span>
                 <div style={pageStyles}>
                     {content}

@@ -1,11 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import ItemCount from "../ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ img, title, price }) => {
-    const onAdd = () => {
-        console.log('You added items to the cart.')
-    }
 
     let itemCardStyle = {
         borderRadius: 30,
@@ -41,12 +39,28 @@ const ItemDetail = ({ img, title, price }) => {
         background: '#E2DCC8'
     }
 
+    const [countItems, setCountItems] = useState(0);
+
+    const onAdd = (count) => {
+        alert(`You added ${count} items to the cart.`)
+        setCountItems(count)
+    };
+
+    const linkToCart = 
+        <div>
+            <Link to="/Cart" style={btnStyle}><a>GO TO CHECKOUT</a></Link>
+        </div>
+
     return (
     <div style={itemCardStyle}>
         <img style={itemImageStyle} src={img} alt="" />
         <h2 style={itemTextStyle}>{title}</h2>
         <h3 style={itemTextStyle}>${price}</h3>
-        <ItemCount initial={1} stock={10} onAdd={onAdd} />
+        { countItems == 0 ? 
+            <ItemCount initial={1} stock={10} onAdd={onAdd} /> : linkToCart
+        }
+        <br />
+        <br />
         <Link to={`/speakers/detail/${title}`} style={btnStyle}><a>SEE MORE</a></Link>
     </div>
     )

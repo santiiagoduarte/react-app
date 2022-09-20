@@ -51,7 +51,7 @@ const Navbar = () => {
         <nav style={navbarStyle}>
             <Link to={`/`}><a href="#"><img src="https://westlakepro.com/wp-content/uploads/2020/01/Barefoot-Dark-Logo.png" alt="" style={logoStyle}/></a></Link>
             <a style={navbarTitle}>Barefoot Sound</a>
-            <Link to={`/`}><a href="#" style={navbarItem}>About</a></Link>
+            <Link to={`/about`}><a href="#" style={navbarItem}>About</a></Link>
             <Link to={`/speakers`}><a href="#" style={navbarItem}>Speakers</a></Link>
             <Link to={`/Contact`}><a href="#" style={navbarItem}>Contact</a></Link>
             <Link to={`/Login`}><a href="#" style={loginBtn}>Login</a></Link>
