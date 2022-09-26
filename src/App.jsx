@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Navbar from './components/Navbar';
+import CartContext from "./components/CartContext";
 import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
 import ContactContainer from './containers/ContactContainer';
@@ -23,16 +24,18 @@ const App = () => {
 
       <>
         <BrowserRouter>
+          <CartContext>
           <Navbar/>
-          <Routes>
-            <Route exact path="/" element={<HomeContainer msg='Home' />}/>
-            <Route exact path="/About" element={<HomeContainer msg='About' />}/>
-            <Route exact path="/speakers" element={<ItemListContainer msg='Our Speakers' />}/>
-            <Route exact path="/Contact" element={<ContactContainer msg='Contact' />}/>
-            <Route exact path="/Login" element={<LoginContainer msg='Login' />}/>
-            <Route exact path="/Cart" element={<CheckoutContainer msg='Checkout' />}/>
-            <Route exact path="/speakers/detail/:id" element={<ItemDetailContainer msg='' />}/>
-          </Routes>
+            <Routes>
+              <Route exact path="/" element={<HomeContainer msg='Home' />}/>
+              <Route exact path="/About" element={<HomeContainer msg='About' />}/>
+              <Route exact path="/speakers" element={<ItemListContainer msg='Our Speakers' />}/>
+              <Route exact path="/Contact" element={<ContactContainer msg='Contact' />}/>
+              <Route exact path="/Login" element={<LoginContainer msg='Login' />}/>
+              <Route exact path="/Cart" element={<CheckoutContainer msg='Checkout' />}/>
+              <Route exact path="/speakers/detail/:id" element={<ItemDetailContainer msg='' />}/>
+            </Routes>
+          </CartContext>
         </BrowserRouter>
       </>
 

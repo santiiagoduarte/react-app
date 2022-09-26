@@ -1,7 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "../ItemCount";
 import { Link } from "react-router-dom";
+import CartContext from "../CartContext/index";
+
 
 const ItemDetail = ({ img, title, price }) => {
 
@@ -40,8 +42,10 @@ const ItemDetail = ({ img, title, price }) => {
     }
 
     const [countItems, setCountItems] = useState(0);
+    const {addItem} = useContext(CartContext)
 
     const onAdd = (count) => {
+        addItem(count)
         alert(`You added ${count} items to the cart.`)
         setCountItems(count)
     };
@@ -59,9 +63,9 @@ const ItemDetail = ({ img, title, price }) => {
         { countItems == 0 ? 
             <ItemCount initial={1} stock={10} onAdd={onAdd} /> : linkToCart
         }
-        <br />
-        <br />
         <Link to={`/speakers/detail/${title}`} style={btnStyle}><a>SEE MORE</a></Link>
+        <br />
+        <br />
     </div>
     )
 }
