@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import ItemDetailContainer from "../containers/ItemDetailContainer";
 import PageTitle from '../components/PageTitle/index'

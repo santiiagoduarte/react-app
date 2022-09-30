@@ -42,10 +42,10 @@ const ItemDetail = ({ img, title, price }) => {
     }
 
     const [countItems, setCountItems] = useState(0);
-    const {addItem} = useContext(CartContext)
+    const addItem = useContext(CartContext)
 
     const onAdd = (count) => {
-        addItem(count)
+        // addItem(count)
         alert(`You added ${count} items to the cart.`)
         setCountItems(count)
     };

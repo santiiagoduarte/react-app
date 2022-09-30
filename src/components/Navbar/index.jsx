@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link to={`/speakers`}><a href="#" style={navbarItem}>Speakers</a></Link>
             <Link to={`/Contact`}><a href="#" style={navbarItem}>Contact</a></Link>
             <Link to={`/Login`}><a href="#" style={loginBtn}>Login</a></Link>
-            <Link to={`/Checkout`}><CartWidget/></Link>
+            <Link to={`/Cart`}><CartWidget/></Link>
         </nav>
     )
 }

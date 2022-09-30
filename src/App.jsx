@@ -28,7 +28,7 @@ const App = () => {
           <Navbar/>
             <Routes>
               <Route exact path="/" element={<HomeContainer msg='Home' />}/>
-              <Route exact path="/About" element={<HomeContainer msg='About' />}/>
+              <Route exact path="/About" element={<AboutContainer msg='About' />}/>
               <Route exact path="/speakers" element={<ItemListContainer msg='Our Speakers' />}/>
               <Route exact path="/Contact" element={<ContactContainer msg='Contact' />}/>
               <Route exact path="/Login" element={<LoginContainer msg='Login' />}/>
