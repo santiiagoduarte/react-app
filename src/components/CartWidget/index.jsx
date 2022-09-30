@@ -1,6 +1,11 @@
 import React from "react";
+import { useContext } from "react";
+import CartContext from "../CartContext";
+
 
 const CartWidget = () => {
+    let CartCntxt = useContext(CartContext);
+    // let items = CartCntxt.reduce((count, items) => count + items.count, 0);
 
     let cartWidget = {
         padding: 16, 

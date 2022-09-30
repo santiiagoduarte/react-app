@@ -1,0 +1,36 @@
+{
+    "speakers": [
+        {
+            "id": 1,
+            "image": "https://vintageking.com/media/catalog/product/cache/c8660c81d7196df55c33284290821786/b/a/barefoot_micromain27_gen2_pair.jpg",
+            "name": "BAREFOOT SOUND MICROMAIN27 GEN2 3.5-WAY ACTIVE STUDIO MONITOR - PAIR",
+            "description": "Speakers",
+            "price": 10.995,
+            "discount": false
+        },
+        {
+            "id": 2,
+            "image": "https://vintageking.com/media/catalog/product/cache/c8660c81d7196df55c33284290821786/b/a/barefoot-micromain-26_50552_1.jpg",
+            "name": "BAREFOOT SOUND MICROMAIN26 4-WAY ACTIVE STUDIO MONITOR - PAIR",
+            "description": "Speakers",
+            "price": 12.995,
+            "discount": false
+        },
+        {
+            "id": 3,
+            "image": "https://vintageking.com/media/catalog/product/cache/c8660c81d7196df55c33284290821786/b/a/barefoot_mm35_pair_4.jpg",
+            "name": "BAREFOOT SOUND MICROMAIN45 3-WAY ACTIVE STUDIO MONITOR - PAIR",
+            "description": "Speakers",
+            "price": 6.995,
+            "discount": false
+        },
+        {
+            "id": 4,
+            "image": "https://vintageking.com/media/catalog/product/cache/c8660c81d7196df55c33284290821786/b/a/barefoot-footprint02-pair_132111_1.jpg",
+            "name": "BAREFOOT SOUND FOOTPRINT02 3-WAY ACTIVE STUDIO MONITOR - PAIR",
+            "description": "Speakers",
+            "price": 3.495,
+            "discount": false
+        }
+    ]
+}
